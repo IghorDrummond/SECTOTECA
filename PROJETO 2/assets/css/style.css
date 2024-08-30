@@ -4,3 +4,19 @@
 	padding: 0;
 }
 
+/* Navegação */
+.navbar a:not(:hover){
+	color: white;
+	-webkit-transition: 1s all;
+	-o-transition: 1s all;
+	transition: 1s all;
+}
+
+
+/* Hovers */
+.navbar a:hover{
+	color: navajowhite;
+	-webkit-transition: 1s all;
+	-o-transition: 1s all;
+	transition: 1s all;
+}

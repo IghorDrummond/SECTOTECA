@@ -155,28 +155,17 @@
                 return $this->json;
 		    }
             /*
-            * Método: LogonUser()
-            * Descrição: Valida se a senha e email estão corretos
+            * Método: getUser()
+            * Descrição: Retorna os dados do usuário logado
             * Data: 29/08/2024
             * Programador(a): Ighor Drummond
             */
             public function getUser(): array
             {   
-                $this->email = $email;
-                $this->constructQuery(3);//Executa a inclusão do usuário
+                $this->constructQuery(3);
                 $this->ret = $this->fetchAll();
-
-                if(isset($this->ret[0]['email'])){
-                    if(password_verify($password, $this->ret[0]['password_user'])){
-                        $this->json[1]['mensagem'] = 'Logado';
-                    }else{
-                        $this->errorExecute('Email ou Senha incorreta!');
-                    }
-                }else{
-                    $this->errorExecute('Email inexistente!');
-                }
-                //Retorna um json para o front-end
-                return $this->json;
+                //Retorna dados do usuário logado
+                return $this->ret;
             }
 		    /*
 			* Método: constructQuery(Opção da query)

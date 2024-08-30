@@ -8,9 +8,10 @@
 		<!-- Titulo do Site -->
 		<title>SectoTeca - Login</title>
 	</head>
-	<body>
+	<body class="bg-light">
 		<?php require_once('pages/header.php'); ?>
 		<h1 class="text-center font-weight-bold text-warning">Olá, sou um site</h1>
 		<?php require_once('vendor/scripts.php'); ?>
+		<?php require_once('pages/footer.php'); ?>
 	</body>
 </html>
